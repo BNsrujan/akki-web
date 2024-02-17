@@ -271,6 +271,10 @@ background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 
 .btn-6 span:hover:after {
   width: 100%;
 }
+.btn-6 :active{
+  background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%); ;
+  color: white;
+}
 
 /**
  * Owl Carousel v2.3.4
@@ -2125,10 +2129,6 @@ a.btn {
   right: 0;
   z-index: 10;
   padding: 0;
-
-
-
-
 background: rgb(0,232,255);
 background: radial-gradient(circle, rgba(0,232,255,0.7791491596638656) 0%, rgba(8,0,212,1) 100%);
 }
@@ -2176,7 +2176,7 @@ background: radial-gradient(circle, rgba(0,232,255,0.7791491596638656) 0%, rgba(
 .header__social_main {
   margin-right: auto;
   width: 90%;
-  margin: 40px auto;
+ 
   text-align: center;
 }
 
@@ -2743,6 +2743,46 @@ background: radial-gradient(circle, rgba(0,232,255,0.7791491596638656) 0%, rgba(
   margin-bottom: 145px;
 }
 
+.button {
+  border-radius: 4px;
+  background-color:#4C40F7;
+  border: none;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  padding: 12px 14px 12px 8px;
+  width: 300px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+.button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;  
+  top: 14px;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+
+.button:hover:after {
+  opacity: 1;
+  right: 10px;
+}
 .details__title {
   margin-bottom: 72px;
   font-size: 132px;
@@ -2838,7 +2878,7 @@ background: radial-gradient(circle, rgba(0,232,255,0.7791491596638656) 0%, rgba(
   pointer-events: none;
 }
 
-.details__img .details__pic {
+.details__img  {
   width: 100%;
 }
 
@@ -2879,7 +2919,7 @@ background: radial-gradient(circle, rgba(0,232,255,0.7791491596638656) 0%, rgba(
   width: 1260px;
 }
 
-.details__figure .details__pic {
+.details__figure  {
   width: 100%;
 }
 
@@ -2925,7 +2965,7 @@ background: radial-gradient(circle, rgba(0,232,255,0.7791491596638656) 0%, rgba(
   visibility: visible;
   opacity: 1;
 }
-
+a
 .owl-nav {
   position: relative;
   z-index: 1;
@@ -3087,6 +3127,22 @@ background: radial-gradient(circle, rgba(0,232,255,0.7791491596638656) 0%, rgba(
 
 .owl-dot:not(:last-child) {
   margin-right: 12px;
+}
+.circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.video{
+  position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: auto;
+          height: 100%;
 }
 
 body:not(.touch-device) .details__item:before,

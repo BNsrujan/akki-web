@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
     <link href="test.css" rel="stylesheet">
  </header>
  
@@ -24,4 +24,48 @@
    <p style="font-family: Andale Mono, monospace;">
      DEERBUCKS.DESIGNING</p>
  </div>
- 
+  -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video in Circle</title>
+  <style>
+      body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          margin: 0;
+      }
+      
+      .circle {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          overflow: hidden;
+          position: relative;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      }
+      
+      .video {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: auto;
+          height: 100%;
+      }
+  </style>
+  </head>
+  <body>
+  <div class="circle">
+      <video class="video" controls>
+          <source autoplay src="/build/img/PNG 1/006_YT.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
+  </div>
+  </body>
+  </html>
+  

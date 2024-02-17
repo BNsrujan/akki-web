@@ -174,6 +174,104 @@ button {
   fill: #4C40F7;
 }
 
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+.btn-6 {
+  background: rgb(247,150,192);
+background: radial-gradient(circle, rgba(247,150,192,1) 0%, rgba(118,174,241,1) 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+ box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-6:hover{
+  background:#e0e5ec;;
+  color: #000000;
+  box-shadow: none;
+}
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+}
+.btn-6 span:hover:after {
+  width: 100%;
+}
+
 /**
  * Owl Carousel v2.3.4
  * Copyright 2013-2018 David Deutsch
@@ -1879,9 +1977,9 @@ select {
 }
 
 .center {
-  max-width: 1334px;
+  max-width: 1410px;
   margin: 0 auto;
-  padding: 0 82px;
+  
 }
 
 .btn {
@@ -1949,17 +2047,19 @@ a.btn {
 
 .h1,
 .h2,
-.h3,
 .h4,
 .h5,
 .h6 {
   font-weight: 600;
 }
-
+.h3{
+  font-weight: 400;
+}
 .h1 {
   font-size: 72px;
   line-height: 1.16667;
   letter-spacing: -.5px;
+ 
 }
 
 .h2 {
@@ -1969,7 +2069,7 @@ a.btn {
 }
 
 .h3 {
-  font-size: 42px;
+  font-size: 28px;
   line-height: 1.33333;
   letter-spacing: -.1px;
 }
@@ -2019,13 +2119,20 @@ a.btn {
 }
 
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 10;
-  padding: 48px 0;
+  padding: 0;
+
+
+
+
+background: rgb(0,232,255);
+background: radial-gradient(circle, rgba(0,232,255,0.7791491596638656) 0%, rgba(8,0,212,1) 100%);
 }
+
 
 .header__center {
   display: -webkit-box;
@@ -2051,9 +2158,9 @@ a.btn {
 
 .header__logo .header__pic {
   width: 174px;
-  color: #4100c2;
-
- 
+  img{
+    height:300px;
+  }
 }
 
 .header__social {
@@ -2065,8 +2172,12 @@ a.btn {
   align-items: center;
 }
 
+
 .header__social_main {
   margin-right: auto;
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
 }
 
 .header__social_inner {
@@ -2226,8 +2337,8 @@ a.btn {
 }
 
 .header__img .header__pic {
-  height: 100%;
-  width: auto;
+  height: 50px;
+  
 }
 
 .header__wrapper .header__center {
@@ -2398,7 +2509,7 @@ a.btn {
 }
 
 .main__wrap {
-  max-width: 490px;
+  max-width: 854px;
 }
 
 .main__title {
@@ -2483,6 +2594,7 @@ a.btn {
 .main__view .main__pic,
 .main__figure .main__pic {
   width: 100%;
+  z-index: 1;
 }
 
 .main__preview:nth-child(2) {
@@ -2521,11 +2633,13 @@ a.btn {
 }
 
 .main__preview:nth-child(7) {
-  right: 2%;
-  bottom: 8.4%;
-  z-index: 3;
-  width: 27.3%;
+  right: 18%;
+  bottom: 9.4%;
+  z-index: 12;
+  width: 56.3%;
+  
 }
+
 
 .main__preview:not(:first-child) {
   position: absolute;
@@ -2542,16 +2656,26 @@ a.btn {
   width: 231px;
 }
 
+
 .main__figure:nth-child(2) {
-  right: 738px;
-  bottom: 21.2%;
-  width: 213px;
+    right: 662px;
+    bottom: -2.8%;
+    width: 241px;
+    z-index: 3;
+
+  img {
+    width: 900px; 
+  }
 }
 
 .main__figure:nth-child(3) {
-  right: 627px;
-  bottom: 6.2%;
-  width: 250px;
+  right: 726px;
+  bottom: 1.2%;
+  width: 257px;
+  z-index: 12;
+  img {
+    width: 1050px; 
+  }
 }
 
 .main__bg, .main__preview, .main__figure {
@@ -4659,7 +4783,7 @@ body:not(.touch-device) .owl-item:hover .details__preview {
     letter-spacing: -.4px;
   }
   .h3 {
-    font-size: 32px;
+    font-size: 27px;
     line-height: 1.5;
     letter-spacing: -.15px;
   }

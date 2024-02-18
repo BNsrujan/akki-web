@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Video Background Button</title>
+<style>
+    body, html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f0f0f0;
+    }
+
+    #video-container {
+        position: relative;
+        width: 640px; /* adjust as needed */
+        height: 360px; /* adjust as needed */
+        /* overflow: hidden; */
+        border-radius: 10px;
+    }
+
+    #video-container video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -1;
+    }
+
+    #video-button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #video-button:hover {
+        background-color: #555;
+    }
+
+</style> 
+</head>
+<body>
+
+<div id="video-container">
+    <video id="video" height ="500" width ="1000"loop controls>
+        <source src="/akki-web/build/img/018_Target_preview.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <button id="video-button">Play Video</button>
+</div>
+
+ <script>
+   
+    
+document.querySelector("#video-button")
+.addEventlistener("mouseover", function(){
+gsap.to("#video-container video",{
+opacity: 1,
+duration:1,
+ease: Power4
+})
+});
+
+document.querySelector("#video-button")
+.addEventlistener("mouseleave", function(){
+gsap.to("#video-container video",{
+opacity: 0,
+duration:1,
+ease: Power4
+})
+});
+</script> 
+
+</body>
+</html>
